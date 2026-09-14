@@ -1,0 +1,22 @@
+bundle:
+  name: qiita-mcp
+
+resources:
+  apps:
+    qiita-mcp:
+      name: qiita-mcp
+      description: "Custom MCP server exposing the Qiita API v2 (FastMCP, streamable HTTP)."
+      source_code_path: .
+      config:
+        command:
+          - python
+          - server.py
+        # Add QIITA_API_TOKEN (preferably via a secret `valueFrom`) to enable
+        # write / authenticated-user tools, then restart the app.
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: https://fevm-classic-stable-ytcy.cloud.databricks.com

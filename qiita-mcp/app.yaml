@@ -1,0 +1,9 @@
+command:
+  - python
+  - server.py
+# To enable write / authenticated-user tools, add a QIITA_API_TOKEN env var below
+# (a Databricks secret via `valueFrom` is preferred over a plaintext `value`) and
+# restart the app. Without it, only public read tools work (60 req/h).
+# env:
+#   - name: QIITA_API_TOKEN
+#     valueFrom: qiita-token

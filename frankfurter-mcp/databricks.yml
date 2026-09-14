@@ -1,0 +1,20 @@
+bundle:
+  name: frankfurter-mcp
+
+resources:
+  apps:
+    frankfurter-mcp:
+      name: frankfurter-mcp
+      description: "Custom MCP server exposing the Frankfurter currency exchange-rate API (FastMCP, streamable HTTP)."
+      source_code_path: .
+      config:
+        command:
+          - python
+          - server.py
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: https://fevm-classic-stable-ytcy.cloud.databricks.com

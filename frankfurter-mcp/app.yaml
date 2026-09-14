@@ -1,0 +1,4 @@
+command:
+  - python
+  - server.py
+# The Frankfurter API is public and needs no API key, so no env vars are required.
